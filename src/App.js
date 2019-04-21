@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { Link, Switch } from 'react-router-dom';
+import { routes } from './routes/routes';
+import { RouteWithSubRoutes } from './routes/RouteConfig';
+
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+		<nav className="App-header">
+			<Link to="/database"><i className="fas fa-database"></i></Link>
+			<Link to="/logout"><i className="fas fa-user-circle"></i>Logout</Link>
+		</nav>
+
+
+		<Switch>
+			{routes.map((route, i) => (
+				<RouteWithSubRoutes key={i} {...route} />
+			))}
+		</Switch>
       </div>
     );
   }
