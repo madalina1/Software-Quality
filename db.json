@@ -2,5 +2,12 @@
    "databases": [  
       "Database1",
       "Database2"
+   ],
+   "tables1": [
+      "Table1",
+      "Table2"
+   ],
+   "tables2": [
+      "Table1"
    ]
 }
