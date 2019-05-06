@@ -1,4 +1,6 @@
-[  
-   "Database1",
-   "Database2"
-]
+{
+   "data":[  
+      "Database1",
+      "Database2"
+   ]
+}
